@@ -645,6 +645,7 @@
         "responseAlgorithms":[
           "CRC32",
           "CRC32C",
+          "CRC64NVME",
           "SHA256",
           "SHA1"
         ]
@@ -1749,6 +1750,7 @@
       "members":{
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"}
       }
@@ -1758,6 +1760,7 @@
       "enum":[
         "CRC32",
         "CRC32C",
+        "CRC64NVME",
         "SHA1",
         "SHA256"
       ]
@@ -1769,6 +1772,7 @@
     },
     "ChecksumCRC32":{"type":"string"},
     "ChecksumCRC32C":{"type":"string"},
+    "ChecksumCRC64NVME":{"type":"string"},
     "ChecksumMode":{
       "type":"string",
       "enum":["ENABLED"]
@@ -1820,6 +1824,7 @@
         "ETag":{"shape":"ETag"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"},
         "ServerSideEncryption":{
@@ -1889,6 +1894,11 @@
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
         },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
+        },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
           "location":"header",
@@ -1952,6 +1962,7 @@
         "ETag":{"shape":"ETag"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"},
         "PartNumber":{"shape":"PartNumber"}
@@ -2276,6 +2287,7 @@
         "LastModified":{"shape":"LastModified"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"}
       }
@@ -2287,6 +2299,7 @@
         "LastModified":{"shape":"LastModified"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"}
       }
@@ -4331,6 +4344,11 @@
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
         },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
+        },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
           "location":"header",
@@ -4879,6 +4897,11 @@
           "shape":"ChecksumCRC32C",
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
+        },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
         },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
@@ -6536,6 +6559,7 @@
         "Size":{"shape":"Size"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"}
       }
@@ -6661,6 +6685,7 @@
         "Size":{"shape":"Size"},
         "ChecksumCRC32":{"shape":"ChecksumCRC32"},
         "ChecksumCRC32C":{"shape":"ChecksumCRC32C"},
+        "ChecksumCRC64NVME":{"shape":"ChecksumCRC64NVME"},
         "ChecksumSHA1":{"shape":"ChecksumSHA1"},
         "ChecksumSHA256":{"shape":"ChecksumSHA256"}
       }
@@ -7728,6 +7753,11 @@
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
         },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
+        },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
           "location":"header",
@@ -7856,6 +7886,11 @@
           "shape":"ChecksumCRC32C",
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
+        },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
         },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
@@ -9225,6 +9260,11 @@
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
         },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
+        },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
           "location":"header",
@@ -9305,6 +9345,11 @@
           "shape":"ChecksumCRC32C",
           "location":"header",
           "locationName":"x-amz-checksum-crc32c"
+        },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-checksum-crc64nvme"
         },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
@@ -9479,6 +9524,11 @@
           "shape":"ChecksumCRC32C",
           "location":"header",
           "locationName":"x-amz-fwd-header-x-amz-checksum-crc32c"
+        },
+        "ChecksumCRC64NVME":{
+          "shape":"ChecksumCRC64NVME",
+          "location":"header",
+          "locationName":"x-amz-fwd-header-x-amz-checksum-crc64nvme"
         },
         "ChecksumSHA1":{
           "shape":"ChecksumSHA1",
